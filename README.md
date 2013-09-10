@@ -1,7 +1,7 @@
-www-quilombola-kr
+www-quilombola-com
 =====================
 
-Repository for quilombola.kr domain.
+Repository for quilombola.com domain.
 
 To clone this repository on a new AWS EC2 instance --
 
@@ -28,14 +28,14 @@ cat ~/.ssh/id_rsa.pub
 # Cloning over SSH allows you to push/pull changes.
 # Use the credential helper with caching set to 1 hour to avoid
 # having to repeatedly enter your username and password.
-git clone https://github.com/munair/www-quilombola-kr.git
+git clone https://github.com/munair/www-quilombola-com.git
 git config --global user.name "Munair Simpson"
 git config --global user.email "munair@gmail.com"
 git config --global credential.helper 'cache --timeout=3600'
 
 # Next change into the app directory and get all
 # npm dependencies.
-cd www-quilombola-kr
+cd www-quilombola-com
 npm install express
 npm install postmark
 
@@ -92,20 +92,20 @@ git branch
 sleep 5
 git merge development
 git push origin staging
-heroku git:remote -a munair-quilombola-kr-staging -r staging-heroku
-curl http://munair-quilombola-kr-staging.herokuapp.com | more
+heroku git:remote -a munair-quilombola-com-staging -r staging-heroku
+curl http://munair-quilombola-com-staging.herokuapp.com | more
 git push staging-heroku staging:master
 git checkout master
 git branch
 sleep 5
 git merge staging
 git push origin master
-heroku git:remote -a munair-quilombola-kr -r production-heroku
+heroku git:remote -a munair-quilombola-com -r production-heroku
 git push production-heroku master:master
-curl http://munair-quilombola-kr.herokuapp.com | more
+curl http://munair-quilombola-com.herokuapp.com | more
 git checkout development
 
 ```
 
-See also http://www.quilombola.kr and [Heroku](https://www.heroku.com) for more details.
+See also http://www.quilombola.com and [Heroku](https://www.heroku.com) for more details.
 
