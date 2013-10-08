@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-var postmark = require("postmark")("4de1b518-9aac-4e43-af9b-1915c1f984c5");
+var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 
 
 var app = express.createServer(express.logger());
@@ -18,9 +18,9 @@ app.post('/contact', function(request, response) {
   var comments = request.body.comments;
   var out = "contact name: " + name + "\tcontact email: " + email + "\tcomments: " + comments + "\n";
   postmark.send({
-    "From": "zumbi@cdoseoul.com",
-    "To": "zumbi@cdoseoul.com",
-    "Subject": "Free Class Signup Form Submission",
+    "From": "munair@quilombola.com",
+    "To": "info@quilombola.com",
+    "Subject": "Quilombola Information Request",
     "TextBody": out,
     "Tag": "registrant"
   }, function(error, success) {
