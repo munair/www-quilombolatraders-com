@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="quilombola">
@@ -18,6 +18,18 @@
     <!-- jQuery via maxCDN -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
+    <!-- Bootstrap Tooltip JS -->
+    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/tooltip.js"></script>
+
+    <!-- Bootstrap Popover JS -->
+    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/popover.js"></script>
+
+    <!-- Bootstrap Carousel JS -->
+    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/carousel.js"></script>
+
+    <!-- Bootstrap Tab JS -->
+    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/tab.js"></script>
+
     <!-- Bootstrap Modal JS -->
     <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/modal.js"></script>
 
@@ -33,14 +45,20 @@
     <!-- Quilombola CSS -->
     <style type="text/css">
 	.qu-heading		{ text-align: center; }
-	.qu-copy		{ text-align: center; }
-	.qu-logo		{ font-family: 'Orbitron', Helvetica, Arial, san-serif; }
-	.qu-brand		{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; }
+	.qu-copy		{ text-align: left; }
+	.qu-logo		{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 28px; }
+	.qu-brand		{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; font-size: 16px; }
+	.modal .qu-logo		{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 16px; }
+	.modal .qu-brand	{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; font-size: 16px; }
+	.carousel-control.left 	{ background-image: none; background-repeat: no; }
+	.carousel-control.right { right: 0; left: auto; background-image: none; background-repeat: no; }
+	.img-circle		{ border: 2px solid #aaaaaa; margin: 5px; }
     </style>
 
-  </head>
+</head>
+<body>
 
-  <body>
+
     <!-- Wrap all page content here -->
     <div id="wrap">
 
@@ -48,52 +66,184 @@
       <div class="container">
 	<div class="row">
 	  <div class="col-xs-12 col-md-4 col-xs-offset-3 col-md-offset-4">
-	    <div class="page-header qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-	    <p class="qu-copy">We provide <a data-toggle="modal" href="#Quilombola-Strategies-Modal">marketing strategy and business development services</a> for new media and other entrepreneurial ventures.</p>
-	    <p class="qu-copy">We are also the sponsor of the <a href="http://www.cdoseoul.kr/">Cordão de Ouro</a> capoeira group in Seoul.</p>
-	  </div>
-	</div>
-	<div class="row">
-	    <!-- Modal -->
-	    <div class="modal fade" id="Quilombola-Strategies-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	      <div class="modal-dialog">
-	        <div class="modal-content">
-	          <div class="modal-header">
-	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	    	    <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-	          </div>
-	          <div class="modal-body">
-	            <h5>Services</h5>
-	            <p>Korean Market Entry Strategies. Business Plan Design and Development. Pricing Strategies. Brand Development. Bootstrapping and Entrepreneurial Finance Strategies. Administrative and Business Development Outsourcing.</p>
-	  	    <h5>About Us</h5>
-	            <p>At Quilombola Strategies we want to see you succeed. We leverage our passion for entrepreneurship and marketing strategy to help you to uniquely define success. We work with you to achieve your goals.</p>
-		    <p>Leading without authenticity is like steering your business towards <a href="http://en.wikipedia.org/wiki/Perfect_competition">perfectly competitive markets</a>. Though we are not economic theorists, we would love to take the time to explain why we believe this to be true. Don't hesitate. Contact us now to find out more.</p>
-	            <h5>Contact Us</h5>
-	            <p> Please fill out the form below to schedule a consultation. </p>
-	            <div id="stylized-form">
-	              <form id="form" name="form" method="post" action="/contact">
-	                <div class="wrapper-block">
-	                  <label>Contact Name:</label>
-	                  <input type="text" name="name" id="name" />
+	    <div class="page-header qu-heading"> <span class="qu-logo">mettlesome marketing</span> <br> <span class="qu-brand">inspired impactful initiatives</span> </div>
+	    <ul class="nav nav-tabs" id="myTab">
+	      <li class="active"><a href="#home">Home</a></li>
+	      <li><a href="#about">About</a></li>
+	      <li><a href="#contact">Contact</a></li>
+	      <li><a href="#projects">Projects</a></li>
+	    </ul>
+	    <div class="tab-content">
+	      <div class="tab-pane active" id="home">
+		<p class="qu-copy"> </p>
+		<p class="qu-copy">We aspire to authentically serve our clients and community. Our services include <a data-toggle="modal" href="#marketing-strategies-modal">marketing strategy</a>, <a data-toggle="modal" href="#business-development-modal">business development</a>, <a data-toggle="modal" href="#immigration-support-modal">immigration</a> and <a data-toggle="modal" href="#relocation-support-modal">relocation support</a>. We are particularly experienced in the provision of these services for telecom/Internet, new media, and related entrepreneurial ventures.</p>
+		<p class="qu-copy">Although we believe in wit over might and the courage to be different, investigation and a penchant for testing hypotheses underpin our approach to marketing. Our desire to learn and leaverage that understanding for our clients is unrelenting.</p>
+		<p class="qu-copy"><a data-toggle="modal" href="#home-contact-form-modal">Contact</a> us today and experience the difference.</p>
+                <!-- Modal -->
+                <div class="modal fade" id="marketing-strategies-modal" tabindex="-1" role="dialog" aria-labelledby="marketingLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
+                      </div>
+                      <div class="modal-body">
+			<h5>Marketing Strategy Advisory</h5>
+			<p>Korean FDI Market Entry Strategies. Business Plan Design and Development. Pricing Strategies. Brand Development. Bootstrapping and Entrepreneurial Finance Strategies.</p>
+                      </div>
+                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="business-development-modal" tabindex="-1" role="dialog" aria-labelledby="bizdevLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Business Development Service</h5>
+                        <p>Client Prospecting. Customer Lead Generation. Customer Pipeline Management. Client Engagement. Relationship Management. Customer Support.</p>
+                      </div>
+                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="immigration-support-modal" tabindex="-1" role="dialog" aria-labelledby="immigrationLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Immigration Support</h5>
+                        <p>General Visa / Immigration Support. Visa Category Consulting. Visa Document Processing. Alien Registration Card Issuing. Visa Extension & Termination Support.</p>
+                      </div>
+                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="relocation-support-modal" tabindex="-1" role="dialog" aria-labelledby="relocationLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Relocation Support</h5> 
+			<p>Housing Support. Furniture Rental & Acquisition. Utilities / Internet / Telephone / Cable TV Provision. Airport Pickup & Cultural Awareness Service. Shipping & Other Relocation Services.</p>
+                      </div>
+                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="home-contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Contact Us</h5>
+                        <p> Please fill out the form below for further information. </p>
+                        <div id="stylized-form">
+                          <form id="form" name="form" method="post" action="/contact">
+                            <div class="wrapper-block"> <label>Contact Name:</label> <input type="text" name="name" id="name" /> </div>
+                            <div class="wrapper-block"> <label>Email Address:</label> <input type="text" name="email" id="email" /> </div>
+                            <div class="wrapper-block"> <label for="comments">Services Required / Background Information:</label>
+                                <textarea name="comments" id="comments" rows="3" cols="10"></textarea> </div>
+                            <input type="submit" value="Submit" class="submit btn-form" /></input>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+	      </div>
+	      <div class="tab-pane" id="about">
+		<div id="profiles" class="carousel slide">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#profiles" data-slide-to="0" class="active"></li>
+		    <li data-target="#profiles" data-slide-to="1"></li>
+		  </ol>
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item active">
+			<p class="qu-copy"> </p>
+		    	<img id="munair-headshot" class="stamp pull-left img-circle" width="100" height="100" src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/munair-headshot.png">
+			<p class="qu-copy">Munair Simpson is the CEO and Founder of Quilombola. Prior to establishing Quilombola, Munair was a business development manager at SK Telecom. While at SK, Munair worked with Mediapeers (Berlin-based) to launch the Asia-focused, online business-to-business content exchange called "Trade All Content". Munair graduated from the Wharton School with an MBA in Marketing and an avid Capoeirista.</p>
+		    </div>
+		    <div class="item">
+			<p class="qu-copy"> </p>
+		    	<img id="joowon-headshot" class="stamp pull-left img-circle" width="100" height="100" src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/joowon-headshot.png">
+			<p class="qu-copy">Joowon Lee is Marketing Manager at Quilombola. Prior to joining Quilombola, Joowon was Global Mobility Manager at SK Telecom. During this period, Joowon diligently managed expatriation and repatriation affairs for Korean and foreign employees. Prior to joining the HR Team at SK Telecom, Joowon was responsible for foreign exchange transactions and personal banking at Hana Bank. Joowon loves traveling and watching sports. </p>
+		    </div>
+		  </div>
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#profiles" data-slide="prev">
+		    <span class="icon-prev"></span>
+		  </a>
+		  <a class="right carousel-control" href="#profiles" data-slide="next">
+		    <span class="icon-next"></span>
+		  </a>
+		</div>
+	      </div>
+	      <div class="tab-pane" id="contact">
+		<p class="qu-copy"> </p>
+		<p class="qu-copy">For further information please address inquiries to our Seoul office (see address below), complete this <a data-toggle="modal" href="#contact-form-modal">contact form</a>, or call Ms. Joowon Lee at +82-10-9090-9183.</p>
+		<p class="qu-copy"> </p>
+		<p class="qu-copy">Quilombola Strategies</p>
+		<p class="qu-copy">1106 Jongno 1 Beon Ga, Gwancheol-dong</p>
+		<p class="qu-copy">Jongno-gu, Seoul 110-111, Korea</p>
+		<p class="qu-copy">inf<a href="http://www.google.com/recaptcha/mailhide/d?k=012b9fAQAY3vzHz3lOqJ_UuA==&amp;c=D_2dzbqYDq6N3WCcqvVTy2oiwrNoiqb5zThZIUUGrKc=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075012b9fAQAY3vzHz3lOqJ_UuA\75\75\46c\75D_2dzbqYDq6N3WCcqvVTy2oiwrNoiqb5zThZIUUGrKc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">...</a>@quilombola.com</p>
+	      	<!-- Modal -->
+		<div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+	          <div class="modal-dialog">
+	            <div class="modal-content">
+	              <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    	        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
+	              </div>
+	              <div class="modal-body">
+	                <h5>Contact Us</h5>
+	                <p> Please fill out the form below for further information. </p>
+	                <div id="stylized-form">
+	                  <form id="form" name="form" method="post" action="/contact">
+	                    <div class="wrapper-block"> <label>Contact Name:</label> <input type="text" name="name" id="name" /> </div>
+	                    <div class="wrapper-block"> <label>Email Address:</label> <input type="text" name="email" id="email" /> </div>
+	                    <div class="wrapper-block"> <label for="comments">Services Required / Background Information:</label> 
+				<textarea name="comments" id="comments" rows="3" cols="10"></textarea> </div>
+	                    <input type="submit" value="Submit" class="submit btn-form" /></input>
+         	          </form>
 	                </div>
-	                <div class="wrapper-block">
-	                  <label>Email Address:</label>
-         	         <input type="text" name="email" id="email" />
-	                </div>
-	                <div class="wrapper-block">
-	                  <label for="comments">Services Required / Background Information:</label>
-	                  <textarea name="comments" id="comments" rows="3" cols="10"></textarea>
-         	        </div>
-	                  <input type="submit" value="Submit" class="submit btn-form" /></input>
-         	      </form>
-	            </div>
-	          </div>
-	          <div class="modal-footer">
-	            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	          </div>
-	        </div><!-- /.modal-content -->
-	      </div><!-- /.modal-dialog -->
-	    </div><!-- /.modal -->
+	              </div>
+	              <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
+	            </div><!-- /.modal-content -->
+	          </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	      </div>
+              <div class="tab-pane" id="projects">
+                <p class="qu-copy"> </p>
+                <p class="qu-copy">In between client engagements, we are constantly honing our business-to-consumer marketing accumen through Quilombola Recreation, a health and fitness-focused project that promotes the classes of the <a href="http://www.cdoseoul.com/">Cordão de Ouro</a> capoeira group in Seoul.</p>
+	      </div>
+	    </div>
+	    <script>
+	    $('#myTab a').click(function (e) {
+	      e.preventDefault()
+	      $(this).tab('show')
+	    })
+	    </script>
+	    </div>
 	  </div><!-- end of column -->
 	</div><!-- end of row -->
       </div><!-- end of container -->
@@ -110,5 +260,7 @@
 
   </script>
   <!-- End of Google Analytics Code -->
-  </body>
+
+
+</body>
 </html>
