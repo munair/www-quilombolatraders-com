@@ -1,69 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="quilombola">
-    <meta name="author" content="quilombola services">
-    <link rel="shortcut icon" href="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/favicon.png">
-
-    <title>quilombola</title>
-
-    <!-- Icon Provider : VisualPharm : http://www.visualpharm.com -->
- 
-    <!-- Bootstrap core CSS -->
-    <link href="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/stylized-form.css" rel="stylesheet">
-
-    <!-- jQuery via maxCDN -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-
-    <!-- Bootstrap Tooltip JS -->
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/tooltip.js"></script>
-
-    <!-- Bootstrap Popover JS -->
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/popover.js"></script>
-
-    <!-- Bootstrap Carousel JS -->
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/carousel.js"></script>
-
-    <!-- Bootstrap Tab JS -->
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/tab.js"></script>
-
-    <!-- Bootstrap Modal JS -->
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/modal.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/html5shiv.js"></script>
-      <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Load Google Fonts -->
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Orbitron|Syncopate">
-
-    <!-- Quilombola CSS -->
-    <style type="text/css">
-	.qu-heading		{ text-align: center; }
-	.qu-copy		{ text-align: left; }
-	.qu-logo		{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 28px; }
-	.qu-brand		{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; font-size: 16px; }
-	.modal .qu-logo		{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 16px; }
-	.modal .qu-brand	{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; font-size: 16px; }
-	.carousel-control	{ left: 15px; width: 40px; height: 40px; margin-top: 50px; opacity: 0.5; filter: alpha(opacity=50); }
-	.carousel-control.left 	{ background-image: none; background-repeat: no; }
-	.carousel-control.right { background-image: none; background-repeat: no; }
-	.carousel-control:hover	{ color:#ffffff;text-decoration:none;opacity:0.9;filter:alpha(opacity=90);}
-	.carousel-control:focus	{ color:#ffffff;text-decoration:none;opacity:0.9;filter:alpha(opacity=90);}
-	.img-circle		{ border: 2px solid #aaaaaa; position: relative; margin: 5px; margin-left: -50px ; left: 50%; }
-    </style>
-
+  <title>{{ pagename|title }}</title>
+  <link rel="shortcut icon" href="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/favicon.png">
+  {{metatags|safe}}
+  {{stylesheets|safe}}
+  {{javascript|safe}}
 </head>
 <body>
 
-
+    <!-- Icon Provider : VisualPharm : http://www.visualpharm.com -->
     <!-- Wrap all page content here -->
     <div id="wrap">
 
@@ -79,178 +25,10 @@
 	      <li><a href="#projects"><img src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-com/work-in-progress-icon.png" alt="work in progress" title="work in progress" width="15px"></a></li>
 	    </ul>
 	    <div class="tab-content">
-	      <div class="tab-pane active" id="home">
-		<p class="qu-copy"> </p>
-		<p class="qu-copy">We aspire to authentically serve our clients and community. Our services include <a data-toggle="modal" href="#marketing-strategies-modal">marketing strategy</a>, <a data-toggle="modal" href="#business-development-modal">business development</a>, <a data-toggle="modal" href="#immigration-support-modal">immigration</a> and <a data-toggle="modal" href="#relocation-support-modal">relocation support</a>. We are particularly experienced in the provision of these services for telecom/Internet, new media, and related entrepreneurial ventures.</p>
-		<p class="qu-copy">As the name of our enterprise might suggest, we have a penchant for <i>David and Goliath</i> underdog scenarios in commerce. We certainly believe in wit over might and the courage to be different. Hypothesis testing underpins our approach to marketing research. Our desire to learn and leaverage that understanding for our clients is unrelenting.</p>
-		<p class="qu-copy"><a data-toggle="modal" href="#home-contact-form-modal">Contact</a> us today and experience the difference.</p>
-                <!-- Modal -->
-                <div class="modal fade" id="marketing-strategies-modal" tabindex="-1" role="dialog" aria-labelledby="marketingLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-                      </div>
-                      <div class="modal-body">
-			<h5>Marketing Strategy Advisory</h5>
-			<p>Korean FDI Market Entry Strategies. Business Plan Design and Development. Pricing Strategies. Brand Development. Bootstrapping and Entrepreneurial Finance Strategies.</p>
-                      </div>
-                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-                <!-- Modal -->
-                <div class="modal fade" id="business-development-modal" tabindex="-1" role="dialog" aria-labelledby="bizdevLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-                      </div>
-                      <div class="modal-body">
-                        <h5>Business Development Service</h5>
-                        <p>Customer Acquisition Strategy. Client Prospecting. Customer Lead Generation. Customer Pipeline Management. Client Engagement. Relationship Management. Customer Support.</p>
-                      </div>
-                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-                <!-- Modal -->
-                <div class="modal fade" id="immigration-support-modal" tabindex="-1" role="dialog" aria-labelledby="immigrationLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-                      </div>
-                      <div class="modal-body">
-                        <h5>Immigration Support</h5>
-                        <p>General Visa / Immigration Support. Visa Category Consulting. Visa Document Processing. Alien Registration Card Issuing. Visa Extension & Termination Support.</p>
-                      </div>
-                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-                <!-- Modal -->
-                <div class="modal fade" id="relocation-support-modal" tabindex="-1" role="dialog" aria-labelledby="relocationLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-                      </div>
-                      <div class="modal-body">
-                        <h5>Relocation Support</h5> 
-			<p>Housing Support. Furniture Rental & Acquisition. Utilities / Internet / Telephone / Cable TV Provision. Airport Pickup & Cultural Awareness Service. Shipping & Other Relocation Services.</p>
-                      </div>
-                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-                <!-- Modal -->
-                <div class="modal fade" id="home-contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-                      </div>
-                      <div class="modal-body">
-                        <h5>Contact Us</h5>
-                        <p> Please fill out the form below for further information. </p>
-                        <div id="stylized-form">
-                          <form id="form" name="form" method="post" action="/contact">
-                            <div class="wrapper-block"> <label>Contact Name:</label> <input type="text" name="name" id="name" /> </div>
-                            <div class="wrapper-block"> <label>Email Address:</label> <input type="text" name="email" id="email" /> </div>
-                            <div class="wrapper-block"> <label for="comments">Services Required / Background Information:</label>
-                                <textarea name="comments" id="comments" rows="3" cols="10"></textarea> </div>
-                            <input type="submit" value="Submit" class="submit btn-form" /></input>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-	      </div>
-	      <div class="tab-pane" id="about">
-		<div id="profiles" class="carousel slide">
-		  <!-- Indicators -->
-		  <ol class="carousel-indicators">
-		    <li data-target="#profiles" data-slide-to="0" class="active"></li>
-		    <li data-target="#profiles" data-slide-to="1"></li>
-		  </ol>
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner">
-		    <div class="item active">
-		    	<img id="munair-headshot" class="stamp clearfix img-circle" width="100" height="100" src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/munair-headshot.png">
-			<p class="qu-copy"><a data-toggle="modal" href="#munair-modal">Munair Simpson</a> is the sole proprietor of Quilombola, a business development and marketing strategy oriented operation serving customers in Asia, North America, and the Caribbean. For the past 17 years, Munair Simpson has been working in either an engineering or business development capacity for the mobile and new media industries in Asia and North America. In these roles, Munair has collaborated with business partners and served customers from all corners of the globe.</p>
-	                <!-- Modal -->
-        	        <div class="modal fade" id="munair-modal" tabindex="-1" role="dialog" aria-labelledby="munairLabel" aria-hidden="true">
-                	  <div class="modal-dialog">
-	                    <div class="modal-content">
-	                      <div class="modal-header">
-	                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	                        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-	                      </div>
-	                      <div class="modal-body">
-	                        <h5>Munair Simpson</h5>
-				<p>Prior to founding Quilombola, Munair was a senior manager at SK Telecom. While completing the requirements for the MBA at the Wharton School at the University of Pennsylvania, Munair was recruited to join SK's New Media Business Development Team. This engagement allowed him to make a smooth transition from the United States to Korea.</p>
-				<p>During his time at SK Telecom, Munair led the launch of SK's online business-to-business marketplace for audiovisual content after spending a summer working on strategy for the Mobile Network Operations (MNO) division. Munair spent over nine years in the United States fostering his passion for technology and new media startups by founding Network Resilience in 2001, and later by working for Gracenote, which was acquired by Sony.</p>
-				<p>Munair started his career in the engineering department at Cable and Wireless in the Cayman Islands after graduating from the University of the West Indies with a Bachelor of Science in Industrial Engineering. In his spare time, Munair enjoys teaching <a href="http://www.cdoseoul.com" target="capoeira">Capoeira</a> and is presently trying to open another Capoeira school in Hong Kong.</p>
-	                      </div>
-	                      <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-	                    </div><!-- /.modal-content -->
-	                  </div><!-- /.modal-dialog -->
-	                </div><!-- /.modal -->
-		    </div>
-		    <div class="item">
-		    	<img id="joowon-headshot" class="stamp clearfix img-circle" width="100" height="100" src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-kr/joowon-headshot.png">
-			<p class="qu-copy">Joowon Lee is Marketing Manager at Quilombola. Prior to joining Quilombola, Joowon was Global Mobility Manager at SK Telecom. During this period, Joowon diligently managed expatriation and repatriation affairs for Korean and foreign employees. Prior to joining the HR Team at SK Telecom, Joowon was responsible for foreign exchange transactions and personal banking at Hana Bank. Joowon loves traveling and watching sports. </p>
-		    </div>
-		  </div>
-		  <!-- Controls -->
-		  <a class="left carousel-control" href="#profiles" data-slide="prev"><img src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-com/goback-icon.png" alt="go back" title="go back" width="40px"> </a>
-		  <a class="right carousel-control" href="#profiles" data-slide="next"><img src="https://s3-ap-northeast-1.amazonaws.com/www-quilombola-com/goforward-icon.png" alt="go forward" title="go forward" width="40px"> </a>
-		</div>
-	      </div>
-	      <div class="tab-pane" id="contact">
-		<p class="qu-copy"> </p>
-		<p class="qu-copy">For further information please address inquiries to our Seoul office (see address below), complete this <a data-toggle="modal" href="#contact-form-modal">contact form</a>, or call Ms. Joowon Lee at +82-10-9090-9183.</p>
-		<p class="qu-copy"> </p>
-		<p class="qu-copy">Quilombola<br>1106 Jongno 1 Beon Ga, Gwancheol-dong<br>Jongno-gu, Seoul 110-111, Korea<br>info<a href="http://www.google.com/recaptcha/mailhide/d?k=012b9fAQAY3vzHz3lOqJ_UuA==&amp;c=D_2dzbqYDq6N3WCcqvVTy2oiwrNoiqb5zThZIUUGrKc=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075012b9fAQAY3vzHz3lOqJ_UuA\75\75\46c\75D_2dzbqYDq6N3WCcqvVTy2oiwrNoiqb5zThZIUUGrKc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">rmation</a>@quilombola.com</p>
-	      	<!-- Modal -->
-		<div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-	          <div class="modal-dialog">
-	            <div class="modal-content">
-	              <div class="modal-header">
-	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	    	        <div class="modal-title qu-heading"> <h2><span class="qu-logo">qu</span> <span class="qu-brand">strategies</span></h2> </div>
-	              </div>
-	              <div class="modal-body">
-	                <h5>Contact Us</h5>
-	                <p> Please fill out the form below for further information. </p>
-	                <div id="stylized-form">
-	                  <form id="form" name="form" method="post" action="/contact">
-	                    <div class="wrapper-block"> <label>Contact Name:</label> <input type="text" name="name" id="name" /> </div>
-	                    <div class="wrapper-block"> <label>Email Address:</label> <input type="text" name="email" id="email" /> </div>
-	                    <div class="wrapper-block"> <label for="comments">Services Required / Background Information:</label> 
-				<textarea name="comments" id="comments" rows="3" cols="10"></textarea> </div>
-	                    <input type="submit" value="Submit" class="submit btn-form" /></input>
-         	          </form>
-	                </div>
-	              </div>
-	              <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div>
-	            </div><!-- /.modal-content -->
-	          </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	      </div>
-              <div class="tab-pane" id="projects">
-                <p class="qu-copy"> </p>
-                <p class="qu-copy">In between client engagements, we are constantly honing our business-to-consumer marketing accumen through Quilombola Recreation, a health and fitness-focused project that promotes the classes of the <a href="http://www.cdoseoul.com/">Cordão de Ouro</a> capoeira group in Seoul.</p>
-                <p class="qu-copy">Another one of our works in progress is <a href="http://www.finalroundmba.com/" target="finalround">Final Round MBA</a>, a service for potential Wharton students that are applying to the prestigous program in the dreaded final round.</p>
-	      </div>
+  	      {{tabHome|safe}}
+  	      {{tabAbout|safe}}
+  	      {{tabContact|safe}}
+  	      {{tabProjects|safe}}
 	    </div>
 	    <script>
 	    $('#myTab a').click(function (e) {
@@ -263,19 +41,6 @@
 	</div><!-- end of row -->
       </div><!-- end of container -->
     </div><!-- end of wrap -->
-  <!-- Google Analytics Code -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-43909973-1', 'quilombola.com');
-    ga('send', 'pageview');
-
-  </script>
-  <!-- End of Google Analytics Code -->
-
-
+  {{analytics|safe}}
 </body>
 </html>
