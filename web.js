@@ -3,7 +3,7 @@ var fs = require('fs');
 var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 
 
-var app = express.createServer(express.logger());
+var app = express(express.logger());
 
 app.use(express.bodyParser());
 
