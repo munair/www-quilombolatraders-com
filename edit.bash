@@ -25,7 +25,7 @@
 # GitHub, before identifying and then pushing the changes to the "live"
 # or "production" instance ("production-heroku) at Heroku.
 # 
-git checkout development
+git checkout development || git checkout -b development
 git branch
 sleep 5
 vi $1
@@ -40,7 +40,8 @@ git push origin development
         * ) echo "please answer yes or no.";;
     esac
 done
-git checkout staging
+git checkout 
+git checkout staging || git checkout -b staging
 git branch
 sleep 5
 git merge development
