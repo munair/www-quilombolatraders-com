@@ -29,7 +29,7 @@ app.get('/', function(request, response) {
   projects = _tabProjects();
   ga = _analytics();
   response.render('index', { 
-	pagename: 	'quilombola',
+	pagename: 	'quilombola traders',
 	metatags: 	meta,
 	stylesheets: 	css,
 	javascript: 	js,
@@ -76,7 +76,7 @@ app.post('/contact', function(request, response) {
   projects = _tabProjects();
   ga = _analytics();
   response.render('contact', {
-        pagename:       'quilombola',
+        pagename:       'quilombola traders',
         metatags:       meta,
         stylesheets:    css,
         javascript:     js,
