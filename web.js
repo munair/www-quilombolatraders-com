@@ -1,40 +1,55 @@
 var express = require('express');
 var fs = require('fs');
-var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
-var swig = require('swig');
+var postmark = require("postmark")("db375280-7dd3-4240-89db-1e19ee9e939e")
 
+var app = express();
 
-var app = express(express.logger());
-
+app.use(express.logger('dev'));
 app.use(express.bodyParser());
-app.engine('html', swig.renderFile);
-app.set('view engine', 'html');
-app.set('views', __dirname + '/');
+app.use("/js", express.static(__dirname + '/js'));
+app.use("/css", express.static(__dirname + '/css'));
+app.use("/images", express.static(__dirname + '/images'));
+app.use("/fonts", express.static(__dirname + '/fonts'));
+app.use("/sounds", express.static(__dirname + '/sounds'));
 
-app.get('/', function(request, response) {
-  response.render('index', { pagename: 'quilombola traders' });
-});
+app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/imports', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/exports', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/contact', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/inc_imports.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_imports.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/inc_exports.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_exports.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/inc_contact.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_contact.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/inc_email.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_email.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/inc_formconfirmation.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_formconfirmation.html', 'utf-8'); response.send(htmlBuffer); });
 
-app.post('/contact', function(request, response) {
+app.post('/inc_email.html', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
-  var comments = request.body.comments;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tcomments: " + comments + "\n";
+  var mobile = request.body.mobile;
+  var message = request.body.message;
+  var validation = request.body.validation;
+  var out = 'contact name: ' + name 
+          + '\ncontact email: ' + email 
+          + '\nmobile: ' + mobile 
+          + '\nmessage: ' + message
+          + '\nvalidation: ' + validation 
+          + '\n';
+
   postmark.send({
-    "From": "munair@quilombola.com",
-    "To": "info@quilombola.com",
-    "Subject": "Quilombola Information Request",
-    "TextBody": out,
-    "Tag": "registrant"
+    "From" : "munair@quilombola.com",
+    "To" : "munair@quilombola.com",
+    "Subject" : "Contact from www.quilombola.com",
+    "Tag" : "Inquiry",
+    "TextBody" : out
   }, function(error, success) {
-       if(error) {
+      if(error) {
           console.error("Unable to send via postmark: " + error.message);
          return;
-       }
-    console.info("Sent to postmark for delivery")
+      }
+      console.info("Sent to postmark for delivery")
   });
 
-  response.render('contact', { pagename: 'quilombola traders' });
+  response.redirect('/inc_formconfirmation.html');
 });
 
 var port = process.env.PORT || 8080;

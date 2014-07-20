@@ -27,10 +27,12 @@
 # 
 git checkout development || git checkout -b development
 git branch
-sleep 5
-vi $1
-git add $1
+echo "going to add the following files to the git repository: "
+ls $1
+git add --all $1
 git commit -m "$2"
+git remote remove origin
+git remote add origin git@github.com:munair/www-quilombolatraders-com.git
 git push origin development
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the staging GitHub repository and the staging instance on Heroku? " yn
@@ -43,11 +45,15 @@ done
 git checkout 
 git checkout staging || git checkout -b staging
 git branch
-sleep 5
 git merge development
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
-heroku git:remote -a staging-quilombolatraders-com -r staging-heroku
+git remote remove heroku
+git remote remove staging-heroku
+heroku apps:destroy dev-quilombolatraders-com --confirm dev-quilombolatraders-com
+heroku apps:create dev-quilombolatraders-com
+heroku domains:add dev.quilombolatraders.com --app dev-quilombolatraders-com
+heroku git:remote -a dev-quilombolatraders-com -r staging-heroku
 git push staging-heroku staging:master
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
@@ -59,9 +65,12 @@ git push staging-heroku staging:master
 done
 git checkout master
 git branch
-sleep 5
 git merge staging
 git push origin master
+git remote remove production-heroku
+heroku apps:destroy www-quilombolatraders-com --confirm www-quilombolatraders-com
+heroku apps:create www-quilombolatraders-com
+heroku domains:add www.quilombolatraders.com --app www-quilombolatraders-com
 heroku git:remote -a www-quilombolatraders-com -r production-heroku
 git push production-heroku master:master
 git checkout development

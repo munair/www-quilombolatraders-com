@@ -1,82 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>{{ pagename|title }}</title>
-  <link rel="shortcut icon" href="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/favicon.png">
+<html>
+    <head>
+        <base href="/" />
+        <meta charset="UTF-8">
+        <title>Quilombola</title>
+        <meta name="description" content="quilobola portfolio of services.">
+        <meta name="keywords" content="quilombolatraders, strategy, marketing, arts, recreation, capoeira, meditation, health and fitness" />                
+        <meta property="og:title" content="Quilombola" />
+        <meta property="og:image" content="http://www.quilombolatraders.com/images/logo.png" />
+        <meta property="og:description" content="quilobola portfolio of services." />
+        <meta property="og:url" content="http://www.quilombolatraders.com/" />
+        <link href="http://fonts.googleapis.com/css?family=Orbitron|Syncopate" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/styles.css">
+	<link rel="shortcut icon" type="image/png" href="images/q-icon.png">
+        <meta id="viewport" name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>js_path = '/'; mecre_lang = 'en'; </script>        
+        <script type="text/javascript" src="js/custom.min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-43909973-1', 'quilombolatraders.com');
+          ga('send', 'pageview');
+          ga('set', 'anonymizeIp', true);
+        </script>
+    </head>
+    
+    <body>
+        <div class="logo"><img src="images/logo.png" width="200" alt="quilombolatraders" /></div>
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/html5shiv.js"></script>
-    <script src="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/respond.min.js"></script>
-  <![endif]-->
+        <div id="content"></div>        
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="quilombola">
-  <meta name="author" content="quilombola services">
+        <div class="menu">
+            <a href="javascript:void(0);" data-link="home" data-name="Home" id="current">Home</a>
+            <a href="javascript:void(0);" data-link="imports" data-name="Imports" >Imports</a>
+            <a href="javascript:void(0);" data-link="exports" data-name="Exports" >Exports</a>
+            <a href="javascript:void(0);" data-link="contact" data-name="Contact" >Contact</a>
+        </div>
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/bootstrap.css" rel="stylesheet">
+        <ul id="mobile_menu">
+            <li><a href="javascript:void(0);" data-link="home">Home</a></li>
+            <li><a href="javascript:void(0);" data-link="imports">Imports</a></li>
+            <li><a href="javascript:void(0);" data-link="exports">Exports</a></li>
+            <li><a href="javascript:void(0);" data-link="contact">Contact</a></li>
+	    <li><a href="http://www.quilombolatraders.kr">Language: 한국어</a></li>
+        </ul>        
 
-  <!-- Custom styles for this template -->
-  <link href="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/stylized-form.css" rel="stylesheet">
+        <div class="lang">            
+            <a href="http://www.quilombolatraders.kr" >KR</a>
+            <a href="http://www.quilombolatraders.com" class="current">EN</a>
+        </div>        
 
-  <!-- Load Google Fonts -->
-  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Orbitron|Syncopate">
+        <div class="controls">
+            <div class="fullscreen"></div>
+            <div class="more-button">
+                <div class="container">
+                    <a href="https://twitter.com/quilombolatraders" onclick="window.open(this.href); return false;" class="share-btn twitter"></a>
+                    <a href="https://www.facebook.com/quilombolatraders" onclick="window.open(this.href); return false;" class="share-btn facebook"></a>
+                    <a href="https://plus.google.com/+quilombolatraders" rel="publisher" onclick="window.open(this.href); return false;" class="share-btn google"></a>
+                </div>
+            </div>
+        </div>
 
-  <!-- Quilombola CSS -->
-  <style type="text/css">
-    .qu-heading			{ text-align: center; }
-    .qu-footer 			{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 8px; text-align: center; }
-    .qu-copy			{ text-align: left; }
-    .qu-logo			{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 28px; }
-    .qu-brand			{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; font-size: 16px; }
-    .modal .qu-logo		{ font-family: 'Orbitron', Helvetica, Arial, san-serif; font-size: 16px; }
-    .modal .qu-brand		{ font-family: 'Syncopate', Helvetica, Arial, san-serif; color: #faa732; font-size: 16px; }
-  </style>
-
-</head>
-<body>
-    <div id="wrap">
-      <!-- Begin page content -->
-      <div class="container">
-	<div class="row">
-	  <div class="col-xs-12 col-md-4 col-xs-offset-3 col-md-offset-4">
-	    <div class="page-header qu-heading"> <span class="qu-logo">quilombola traders</span> <br> <span class="qu-brand">100% Pure Jamaican Blue Mountain Coffee</span> </div>
-	    <div class="qu-heading">
-                <a href="https://facebook.com/quilombolatraders" rel="publisher"><img src="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/facebook-icon-40x40px.jpg"></a> <br>
-                <a href="https://plus.google.com/102229788125819778558" rel="publisher"><img src="https://s3-ap-northeast-1.amazonaws.com/www-quilombolatraders-com/google-plus-icon-40x40px.png"></a> <br> <hr />
-	    </div>
-	  </div><!-- end of column -->
-	</div><!-- end of row -->
-      </div><!-- end of container -->
-    </div><!-- end of wrap -->
-    <div class="qu-footer row-fluid footer">
-      <div class="span12">
-	<p>
-copyright (c) 2014 quilombola.<br> all rights reserved.
-	</p>
-
-	<p>
-[quilombola trading office]<br> [1106 jongno 1 beon ga, gwancheol-dong, jongno-gu]
-	</p>
-
-	<p>
-[mobile phone number : 010-9090-9183]<br> [business registration number : 101-11-14837]<br> [proprietor : munair simpson]
-	</p>
-      </div>
-    </div>
-  <!-- Google Analytics Code -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-47549817-1', 'quilombolatraders.com');
-      ga('send', 'pageview');
-
-    </script>
-  <!-- End of Google Analytics Code -->
-</body>
+        <div class="bg"></div>
+    </body>
 </html>
